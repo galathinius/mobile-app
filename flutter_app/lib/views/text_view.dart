@@ -12,7 +12,7 @@ class TextView extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          '$text',
+          '$text'.toUpperCase(),
           style: Theme.of(context).textTheme.headline4,
         ),
       ),
