@@ -12,7 +12,7 @@ class RandomWordsState extends State<WordsView> {
   final TextStyle _biggerFont = const TextStyle(fontSize: 18);
 
   void _pushSaved() {
-    Navigator.pushNamed(context, SavedViewRoute, arguments: _saved);
+    Navigator.pushNamed(context, SavedWordsViewRoute, arguments: _saved);
   }
 
   @override

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-class SavedView extends StatelessWidget {
+class SavedWordsView extends StatelessWidget {
   final Set<String> saved;
-  SavedView({Key key, this.saved}) : super(key: key);
-
+  SavedWordsView({Key key, this.saved}) : super(key: key);
   final TextStyle _biggerFont = const TextStyle(fontSize: 18);
 
   @override

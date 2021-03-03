@@ -23,10 +23,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => WordsView(),
       );
-    case SavedViewRoute:
+    case SavedWordsViewRoute:
       var listArguments = settings.arguments;
       return MaterialPageRoute(
-        builder: (context) => SavedView(saved: listArguments),
+        builder: (context) => SavedWordsView(saved: listArguments),
       );
     default:
       return CupertinoPageRoute(
