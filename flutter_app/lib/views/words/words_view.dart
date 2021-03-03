@@ -1,46 +1,13 @@
 import 'package:flutter/material.dart';
-// import 'package:english_words/english_words.dart';
+
 import '../../routing_constants.dart';
 
-class BoredView extends StatefulWidget {
+class WordsView extends StatefulWidget {
   @override
   RandomWordsState createState() => RandomWordsState();
 }
 
-class RandomWordsState extends State<BoredView> {
-  final List<String> _suggestions = [
-    "communication",
-    "population",
-    "engineering",
-    "distribution",
-    "development",
-    "contribution",
-    "analysis",
-    "understanding",
-    "satisfaction",
-    "technology",
-    "recommendation",
-    "responsibility",
-    "imagination",
-    "advertising",
-    "obligation",
-    "opportunity",
-    "resolution",
-    "interaction",
-    "university",
-    "philosophy",
-    "explanation",
-    "revolution",
-    "literature",
-    "investment",
-    "recording",
-    "information",
-    "intention",
-    "enthusiasm",
-    "application",
-    "establishment",
-  ];
-
+class RandomWordsState extends State<WordsView> {
   final Set<String> _saved = Set<String>();
   final TextStyle _biggerFont = const TextStyle(fontSize: 18);
 
@@ -52,7 +19,7 @@ class RandomWordsState extends State<BoredView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Boring page'),
+        title: Text('Words page'),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.list_sharp), onPressed: _pushSaved),
         ],
@@ -96,4 +63,37 @@ class RandomWordsState extends State<BoredView> {
     ).toList();
     return ListView(children: divided);
   }
+
+  final List<String> _suggestions = [
+    "communication",
+    "population",
+    "engineering",
+    "distribution",
+    "development",
+    "contribution",
+    "analysis",
+    "understanding",
+    "satisfaction",
+    "technology",
+    "recommendation",
+    "responsibility",
+    "imagination",
+    "advertising",
+    "obligation",
+    "opportunity",
+    "resolution",
+    "interaction",
+    "university",
+    "philosophy",
+    "explanation",
+    "revolution",
+    "literature",
+    "investment",
+    "recording",
+    "information",
+    "intention",
+    "enthusiasm",
+    "application",
+    "establishment",
+  ];
 }

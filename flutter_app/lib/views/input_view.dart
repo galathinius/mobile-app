@@ -14,8 +14,8 @@ class _InputViewState extends State<InputView> {
   }
 
   void _pushShowText() {
-    if (_text == 'bored') {
-      Navigator.pushNamed(context, BoredViewRoute);
+    if (_text == 'words') {
+      Navigator.pushNamed(context, WordsViewRoute);
     } else
       Navigator.pushNamed(context, TextViewRoute, arguments: _text);
   }

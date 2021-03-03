@@ -5,8 +5,8 @@ import 'routing_constants.dart';
 import 'views/input_view.dart';
 import 'views/text_view.dart';
 import 'views/undefined_view.dart';
-import 'views/boredom/bored_view.dart';
-import 'views/boredom/saved_view.dart';
+import 'views/words/words_view.dart';
+import 'views/words/saved_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -19,9 +19,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return CupertinoPageRoute(
         builder: (context) => TextView(text: textArgument),
       );
-    case BoredViewRoute:
+    case WordsViewRoute:
       return MaterialPageRoute(
-        builder: (context) => BoredView(),
+        builder: (context) => WordsView(),
       );
     case SavedViewRoute:
       var listArguments = settings.arguments;
