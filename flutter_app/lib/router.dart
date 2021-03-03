@@ -4,9 +4,13 @@ import 'routing_constants.dart';
 
 import 'views/input_view.dart';
 import 'views/text_view.dart';
+
 import 'views/undefined_view.dart';
+
 import 'views/words/words_view.dart';
 import 'views/words/saved_view.dart';
+
+import 'views/xkcd/comic_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -28,11 +32,13 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => SavedWordsView(saved: listArguments),
       );
+    case ComicViewRoute:
+      return MaterialPageRoute(
+        builder: (context) => ComicView(),
+      );
     default:
       return CupertinoPageRoute(
-        builder: (context) => UndefinedView(
-            // name: settings.name,
-            ),
+        builder: (context) => UndefinedView(),
       );
   }
 }
