@@ -8,7 +8,38 @@ class BoredView extends StatefulWidget {
 }
 
 class RandomWordsState extends State<BoredView> {
-  final List<String> _suggestions = strings;
+  final List<String> _suggestions = [
+    "communication",
+    "population",
+    "engineering",
+    "distribution",
+    "development",
+    "contribution",
+    "analysis",
+    "understanding",
+    "satisfaction",
+    "technology",
+    "recommendation",
+    "responsibility",
+    "imagination",
+    "advertising",
+    "obligation",
+    "opportunity",
+    "resolution",
+    "interaction",
+    "university",
+    "philosophy",
+    "explanation",
+    "revolution",
+    "literature",
+    "investment",
+    "recording",
+    "information",
+    "intention",
+    "enthusiasm",
+    "application",
+    "establishment",
+  ];
 
   final Set<String> _saved = Set<String>();
   final TextStyle _biggerFont = const TextStyle(fontSize: 18);
@@ -64,40 +95,5 @@ class RandomWordsState extends State<BoredView> {
       tiles: tiles,
     ).toList();
     return ListView(children: divided);
-  }
-
-  List<String> get strings {
-    return [
-      "communication",
-      "population",
-      "engineering",
-      "distribution",
-      "development",
-      "contribution",
-      "analysis",
-      "understanding",
-      "satisfaction",
-      "technology",
-      "recommendation",
-      "responsibility",
-      "imagination",
-      "advertising",
-      "obligation",
-      "opportunity",
-      "resolution",
-      "interaction",
-      "university",
-      "philosophy",
-      "explanation",
-      "revolution",
-      "literature",
-      "investment",
-      "recording",
-      "information",
-      "intention",
-      "enthusiasm",
-      "application",
-      "establishment",
-    ];
   }
 }
