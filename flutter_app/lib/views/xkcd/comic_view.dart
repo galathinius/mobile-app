@@ -61,7 +61,13 @@ class ComicViewState extends State<ComicView> {
                   // image
                   Container(
                     margin: const EdgeInsets.all(6),
-                    child: Image.network(snapshot.data.img),
+                    padding: const EdgeInsets.all(0),
+                    child: Expanded(
+                      child: Image.network(
+                        snapshot.data.img,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ),
 
                   // details
