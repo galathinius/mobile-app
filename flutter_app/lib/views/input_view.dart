@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../routing_constants.dart';
 
 class InputView extends StatefulWidget {
-  // final String title;
-  // InputView({Key key, this.title}) : super(key: key);
-
   @override
   _InputViewState createState() => _InputViewState();
 }
@@ -17,8 +13,11 @@ class _InputViewState extends State<InputView> {
     _text = inputText;
   }
 
-  void _pushCounted() {
-    Navigator.pushNamed(context, TextViewRoute, arguments: _text);
+  void _pushShowText() {
+    if (_text == 'words') {
+      Navigator.pushNamed(context, WordsViewRoute);
+    } else
+      Navigator.pushNamed(context, TextViewRoute, arguments: _text);
   }
 
   @override
@@ -42,7 +41,7 @@ class _InputViewState extends State<InputView> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _pushCounted,
+        onPressed: _pushShowText,
         tooltip: 'Done',
         child: Icon(Icons.check),
       ),
