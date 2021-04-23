@@ -4,6 +4,10 @@ import 'dart:math';
 import './comic_response.dart';
 import './comic_request.dart';
 
+import './widgets/image_container.dart';
+import './widgets/title_container.dart';
+import './widgets/details_container.dart';
+
 class ComicView extends StatefulWidget {
   @override
   ComicViewState createState() => ComicViewState();
@@ -21,19 +25,6 @@ class ComicViewState extends State<ComicView> {
     futureComic = fetchComic(next());
   }
 
-  final TextStyle _titleStyle = const TextStyle(
-    fontWeight: FontWeight.w800,
-    fontFamily: 'Roboto',
-    letterSpacing: 0.5,
-    fontSize: 30,
-  );
-  final TextStyle _textStyle = const TextStyle(
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Roboto',
-    letterSpacing: 0.5,
-    fontSize: 18,
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,33 +39,13 @@ class ComicViewState extends State<ComicView> {
               return ListView(
                 children: [
                   // title
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(10, 20, 10, 10),
-                    child: Center(
-                      child: Text(
-                        snapshot.data.title,
-                        style: _titleStyle,
-                      ),
-                    ),
-                  ),
+                  TitleContainer(snapshot.data.title),
 
                   // image
-                  Container(
-                    margin: const EdgeInsets.all(6),
-                    padding: const EdgeInsets.all(0),
-                    child: Expanded(
-                      child: Image.network(
-                        snapshot.data.img,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
+                  ImageContainer(snapshot.data.img),
 
                   // details
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(6, 6, 6, 20),
-                    child: Text(snapshot.data.alt, style: _textStyle),
-                  ),
+                  DetailsContainer(snapshot.data.alt)
                 ],
               );
             } else if (snapshot.hasError) {
