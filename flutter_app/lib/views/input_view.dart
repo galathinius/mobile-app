@@ -18,6 +18,8 @@ class _InputViewState extends State<InputView> {
       Navigator.pushNamed(context, WordsViewRoute);
     } else if (_text == 'xkcd') {
       Navigator.pushNamed(context, ComicViewRoute);
+    } else if (_text == 'bored') {
+      Navigator.pushNamed(context, ActivityViewRoute);
     } else
       Navigator.pushNamed(context, TextViewRoute, arguments: _text);
   }

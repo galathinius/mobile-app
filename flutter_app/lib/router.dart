@@ -11,6 +11,7 @@ import 'views/words/words_view.dart';
 import 'views/words/saved_view.dart';
 
 import 'views/xkcd/comic_view.dart';
+import 'views/bored/bored_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -35,6 +36,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case ComicViewRoute:
       return MaterialPageRoute(
         builder: (context) => ComicView(),
+      );
+    case ActivityViewRoute:
+      return MaterialPageRoute(
+        builder: (context) => ActivityView(),
       );
     default:
       return CupertinoPageRoute(
