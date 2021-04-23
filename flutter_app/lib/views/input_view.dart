@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/views/drawer.dart';
-import '../routing_constants.dart';
+import 'package:flutter_app/views/drawer/drawer.dart';
+import '../router/routing_constants.dart';
 
 class InputView extends StatefulWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/views/shared_widgets/home_button.dart';
 
-import '../../routing_constants.dart';
+import '../../router/routing_constants.dart';
 import './words.dart';
 
 class WordsView extends StatefulWidget {
