@@ -16,7 +16,7 @@ class AlbumViewState extends State<AlbumView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Create Data Example'),
+        title: Text('Create Data'),
       ),
       body: Container(
         alignment: Alignment.center,
