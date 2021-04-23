@@ -12,6 +12,7 @@ import 'views/words/saved_view.dart';
 
 import 'views/xkcd/comic_view.dart';
 import 'views/bored/bored_view.dart';
+import 'views/album/album_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -40,6 +41,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case ActivityViewRoute:
       return MaterialPageRoute(
         builder: (context) => ActivityView(),
+      );
+    case AlbumViewRoute:
+      return MaterialPageRoute(
+        builder: (context) => AlbumView(),
       );
     default:
       return CupertinoPageRoute(
