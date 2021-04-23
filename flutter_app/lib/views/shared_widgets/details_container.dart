@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class DetailsContainer extends StatelessWidget {
   final String text;
+  final String field;
 
-  DetailsContainer(this.text);
+  DetailsContainer(this.text, {this.field = ''});
 
   final TextStyle _textStyle = const TextStyle(
     fontWeight: FontWeight.w400,
@@ -14,9 +15,12 @@ class DetailsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String textToUse =
+        (this.field == '') ? this.text : '${this.field} : ${this.text}';
+
     return Container(
       margin: const EdgeInsets.fromLTRB(6, 6, 6, 20),
-      child: Text(this.text, style: _textStyle),
+      child: Text(textToUse, style: _textStyle),
     );
   }
 }

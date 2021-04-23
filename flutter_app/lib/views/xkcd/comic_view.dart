@@ -5,8 +5,8 @@ import './comic_response.dart';
 import './comic_request.dart';
 
 import './widgets/image_container.dart';
-import './widgets/title_container.dart';
-import './widgets/details_container.dart';
+import '../shared_widgets/title_container.dart';
+import '../shared_widgets/details_container.dart';
 
 class ComicView extends StatefulWidget {
   @override
