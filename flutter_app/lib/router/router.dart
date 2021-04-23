@@ -2,17 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'routing_constants.dart';
 
-import 'views/input_view.dart';
-import 'views/text_view.dart';
+import '../views/input_view.dart';
+import '../views/text_view.dart';
 
-import 'views/undefined_view.dart';
+import '../views/undefined_view.dart';
 
-import 'views/words/words_view.dart';
-import 'views/words/saved_view.dart';
+import '../views/words/words_view.dart';
+import '../views/words/saved_view.dart';
 
-import 'views/xkcd/comic_view.dart';
-import 'views/bored/bored_view.dart';
-import 'views/album/album_view.dart';
+import '../views/xkcd/comic_view.dart';
+import '../views/bored/bored_view.dart';
+import '../views/album/album_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
