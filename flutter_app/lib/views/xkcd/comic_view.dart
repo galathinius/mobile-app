@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/views/shared_widgets/home_button.dart';
 import 'dart:math';
 
 import './comic_response.dart';
@@ -29,6 +30,7 @@ class ComicViewState extends State<ComicView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: HomeButton(context),
         title: Text('xkcd comic'),
       ),
       body: Center(
