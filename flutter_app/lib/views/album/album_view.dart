@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/views/shared_widgets/home_button.dart';
 
 import './album_response.dart';
 import './album_request.dart';
@@ -16,6 +17,7 @@ class AlbumViewState extends State<AlbumView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: HomeButton(context),
         title: Text('Create Data'),
       ),
       body: Container(

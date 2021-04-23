@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/views/shared_widgets/home_button.dart';
 
 import 'bored_response.dart';
 import 'bored_request.dart';
@@ -24,6 +25,7 @@ class ActivityViewState extends State<ActivityView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: HomeButton(context),
         title: Text('Activity'),
       ),
       body: Center(

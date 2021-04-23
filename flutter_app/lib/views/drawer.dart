@@ -32,6 +32,20 @@ class DrawerWidget extends StatelessWidget {
               Navigator.pushReplacementNamed(context, WordsViewRoute);
             },
           ),
+          ListTile(
+            title: Text('album'),
+            onTap: () {
+              // Update the state of the app
+              Navigator.pushReplacementNamed(context, AlbumViewRoute);
+            },
+          ),
+          ListTile(
+            title: Text('activity'),
+            onTap: () {
+              // Update the state of the app
+              Navigator.pushReplacementNamed(context, ActivityViewRoute);
+            },
+          ),
         ],
       ),
     );
