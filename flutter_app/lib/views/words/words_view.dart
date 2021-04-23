@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/views/shared_widgets/home_button.dart';
 
 import '../../routing_constants.dart';
+import './words.dart';
 
 class WordsView extends StatefulWidget {
   @override
@@ -19,6 +21,7 @@ class RandomWordsState extends State<WordsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: HomeButton(context),
         title: Text('Words page'),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.list_sharp), onPressed: _pushSaved),
@@ -52,7 +55,7 @@ class RandomWordsState extends State<WordsView> {
   }
 
   Widget _buildSuggestions() {
-    final Iterable<ListTile> tiles = _suggestions.map(
+    final Iterable<ListTile> tiles = suggestions.map(
       (String pair) {
         return _buildRow(pair);
       },
@@ -63,37 +66,4 @@ class RandomWordsState extends State<WordsView> {
     ).toList();
     return ListView(children: divided);
   }
-
-  final List<String> _suggestions = [
-    "communication",
-    "population",
-    "engineering",
-    "distribution",
-    "development",
-    "contribution",
-    "analysis",
-    "understanding",
-    "satisfaction",
-    "technology",
-    "recommendation",
-    "responsibility",
-    "imagination",
-    "advertising",
-    "obligation",
-    "opportunity",
-    "resolution",
-    "interaction",
-    "university",
-    "philosophy",
-    "explanation",
-    "revolution",
-    "literature",
-    "investment",
-    "recording",
-    "information",
-    "intention",
-    "enthusiasm",
-    "application",
-    "establishment",
-  ];
 }
