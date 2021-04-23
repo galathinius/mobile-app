@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/views/drawer.dart';
 import '../routing_constants.dart';
 
 class InputView extends StatefulWidget {
@@ -40,6 +41,7 @@ class _InputViewState extends State<InputView> {
           width: 250,
         ),
       ),
+      drawer: DrawerWidget(),
       floatingActionButton: FloatingActionButton(
         onPressed: _pushShowText,
         tooltip: 'Done',
